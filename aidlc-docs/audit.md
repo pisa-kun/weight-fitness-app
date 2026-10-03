@@ -195,3 +195,16 @@
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.
 **Answers**: Q1 favors lower cost than the single-app A option but does not specify the desired component boundary. Q2 B (monthly JSON objects); Q3 A (all JSON and image transfers via backend); Q4 A (feature-specific use-case services); Q5 A (typed results/errors translated by services).
 **Status**: Plan approved. Q1's cost preference is clear but its architectural choice is ambiguous; added Question 6 in the plan and paused design artifact generation until resolved.
+
+## Functional Design - Mission Scope Clarification
+**Timestamp**: 2026-10-03T17:00:34+09:00
+**User Input**: Q14-B and Q15-C in `weight-fitness-app-functional-design-plan.md`.
+**Resolution**: Mission tracking starts on the initial setup date; exercise goals are mission entries, not a separate quota. Requirements and stories were updated accordingly.
+**Follow-up**: Q16 asks whether a date before mission setup can receive the completed-calendar color when weight is recorded.
+
+## Session Handoff - Functional Design
+**Timestamp**: 2026-10-03T17:29:52+09:00
+**User Input**: "セッションが長くなってきたので、ちょうどいいところで一度終了して、別セッションで作業したいです。"
+**Confirmed State**: Q1-Q16 answered. Four Functional Design draft files exist under `aidlc-docs/construction/weight-fitness-app/functional-design/`; Q16-B permits completed color before mission setup when weight is recorded.
+**Remaining Work**: Synchronize MissionConfigurationRepository across `component-dependency.md`, `application-design.md`, and UOW artifacts; verify FR/US/story-map traceability; validate all four design drafts; then request review through `functional-design-review.md`.
+**Next Stage**: After Functional Design approval, proceed to NFR Requirements, where language and framework selection belong. No application code or AWS resources have been created.

@@ -6,7 +6,7 @@
 | Story | 概要 | Unit | 主なレイヤー |
 |---|---|---|---|
 | US-01 | 体重を記録する | UOW-01 | Presentation, API, Application, Domain, Monthly JSON |
-| US-02 | 運動ノルマを確認・記録する | UOW-01 | Presentation, API, Application, Monthly JSON |
+| US-02 | 運動目標をデイリーミッションとして記録する | UOW-01 | Presentation, API, Application, Monthly JSON |
 | US-03 | デイリーミッションを確認・達成する | UOW-01 | Presentation, API, Application, Monthly JSON |
 | US-04 | 標準ミッションを管理する | UOW-01 | Presentation, API, Application, Monthly JSON |
 | US-05 | 月間目標を設定する | UOW-01 | Presentation, API, Application, Monthly JSON |

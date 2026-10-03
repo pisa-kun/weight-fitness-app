@@ -15,9 +15,17 @@
 
 **責務**: 標準ミッションの取得、追加・編集、日付ごとの達成状態更新を調整する。
 
-**利用するコンポーネント**: MonthlyJsonRepository、Result/Error Mapping。
+**利用するコンポーネント**: MissionConfigurationRepository、MonthlyJsonRepository、Result/Error Mapping。
 
-**代表操作**: `listMissions(date)`、`setMission(command)`、`setCompletion(date, itemId, completed)`。
+**代表操作**: `listMissions(date)`、`configureMissions(definitions, expectedVersion)`、`setMission(command)`、`setCompletion(date, itemId, completed)`。
+
+## MissionConfigurationRepository
+
+**責務**: setupDate、1〜15件の有効ミッション定義、定義version、適用開始日付きrevision履歴を共有JSONとして読み書きする。
+
+**利用するコンポーネント**: PrivateS3ObjectAdapter。
+
+**代表操作**: `readConfiguration()`、`writeConfiguration(configuration, expectedVersion)`。
 
 ## MonthlyGoalService
 

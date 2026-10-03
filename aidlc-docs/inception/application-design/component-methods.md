@@ -23,6 +23,8 @@ type Result<T> = Success<T> | Failure<AppError>
 - `getMonth(yearMonth: YearMonth): Result<MonthView>` — 月データとカレンダー表示用の状態を返す。
 - `saveDay(date: LocalDate, update: DayUpdate, expectedVersion: Version?): Result<DayView>` — 日単位の更新を受け付ける。
 - `updateMission(command: MissionCommand): Result<MissionView>` — 標準ミッションの追加・編集を受け付ける。
+- `configureMissions(definitions: List<MissionDefinition>, expectedVersion: Version?): Result<MissionConfiguration>` — 初回設定または将来適用するミッション定義の更新を受け付ける。
+- `configureMissions(definitions: List<MissionDefinition>, expectedVersion: Version?): Result<MissionConfiguration>` — 初回設定または将来適用するミッション定義の更新を受け付ける。
 - `updateMonthlyGoal(yearMonth: YearMonth, goal: GoalUpdate): Result<GoalView>` — 月間目標の追加・編集を受け付ける。
 - `uploadFoodImage(date: LocalDate, image: ImageUpload): Result<ImageReference>` — 料理画像をバックエンド経由で保存する。
 - `getFoodImage(imageId: ImageId): Result<ImageContent>` — 画像をバックエンド経由で取得する。
@@ -65,3 +67,13 @@ APIはログイン認証なしで動作する要件を持つ。全URL利用者�
 - `toUiMessage(error: AppError): UserMessage` — 型付きエラーから操作可能な画面メッセージを作る。
 
 代表的な `AppError`: `ValidationError`、`NotFound`、`Conflict`、`StorageFailure`、`UnsupportedImage`、`PayloadTooLarge`、`UnexpectedFailure`。詳細なコード、再試行判定、HTTPステータスは後続設計で確定する。
+
+## C-08 Mission Configuration Store
+
+- `readConfiguration(): Result<Versioned<MissionConfiguration>>` — 共有ミッション設定JSONとversionを取得する。
+- `writeConfiguration(configuration: MissionConfiguration, expectedVersion: Version?): Result<Version>` — 設定を保存し新versionを返す。stale versionではConflictを返す。
+
+## C-08 Mission Configuration Store
+
+- `readConfiguration(): Result<Versioned<MissionConfiguration>>` — 共有ミッション設定JSONとversionを取得する。
+- `writeConfiguration(configuration: MissionConfiguration, expectedVersion: Version?): Result<Version>` — 設定を保存し新versionを返す。stale versionではConflictを返す。

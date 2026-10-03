@@ -34,10 +34,10 @@
 
 **責務**
 - 日次記録、ミッション、月間目標、カレンダー表示、料理画像のユースケースを担当する。
-- ドメイン入力を検証し、C-04またはC-05へ読み書きを依頼する。
+- ドメイン入力を検証し、C-04、C-05またはC-08へ読み書きを依頼する。
 - 同じ月JSONを更新する処理で競合結果をC-02へ伝える。
 
-**インターフェース**: C-04 Monthly JSON Store、C-05 Image Object Storeを利用する。
+**インターフェース**: C-04 Monthly JSON Store、C-05 Image Object Store、C-08 Mission Configuration Storeを利用する。
 
 ## C-04 Monthly JSON Store
 
@@ -68,12 +68,12 @@
 **目的**: 非公開S3オブジェクトへの最小限のアクセスを提供する。
 
 **責務**
-- 月JSONと画像オブジェクトの読み書きを行う。
+- 月JSON、共有Mission Configuration JSON、画像オブジェクトの読み書きを行う。
 - 要件で許可された個別画像オブジェクト削除を行う。
 - バケットやオブジェクトを公開せず、バックエンドからだけアクセスさせる。
 - SDK／クラウド例外をアプリ共通の型付きストレージエラーへ変換する。
 
-**インターフェース**: C-04、C-05が利用する。AWSサービス選択、IAM詳細、鍵管理、リージョンはInfrastructure Designで決定する。
+**インターフェース**: C-04、C-05、C-08が利用する。AWSサービス選択、IAM詳細、鍵管理、リージョンはInfrastructure Designで決定する。
 
 ## C-07 Result and Error Mapping
 
@@ -85,6 +85,18 @@
 - 内部のS3詳細や認証情報を利用者向け応答へ露出しない。
 
 **インターフェース**: C-02、C-03、C-06から共通利用する。
+
+## C-08 Mission Configuration Store
+
+**目的**: 全月で共有する初回設定日、ミッション定義、定義バージョンをJSONとして永続化する。
+
+**責務**
+- Mission Configuration JSONを読み書きし、versionと適用開始日を保持する。
+- 初回1〜15件のmission setupを保存する。
+- 古いversionからの更新を拒否しConflictを返す。
+- 月ごとの記録JSONとは別オブジェクトとして扱い、両方とも非公開S3へ保存する。
+
+**インターフェース**: C-03 Feature Servicesが利用し、C-06 Private S3 Accessを介して保存する。
 
 ## 配置上の境界
 
