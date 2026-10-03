@@ -130,3 +130,9 @@
 ## Application Design - Planning Started
 **Timestamp**: 2026-10-03T16:22:23+09:00
 **Artifacts**: `application-design-plan.md` and `application-design-plan-review.md` created. Awaiting plan approval and answers to five design questions.
+
+## Application Design - Plan Approval and Answers
+**Timestamp**: 2026-10-03T16:27:22+09:00
+**User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.
+**Answers**: Q1 favors lower cost than the single-app A option but does not specify the desired component boundary. Q2 B (monthly JSON objects); Q3 A (all JSON and image transfers via backend); Q4 A (feature-specific use-case services); Q5 A (typed results/errors translated by services).
+**Status**: Plan approved. Q1's cost preference is clear but its architectural choice is ambiguous; added Question 6 in the plan and paused design artifact generation until resolved.
