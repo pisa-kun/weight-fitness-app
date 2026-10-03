@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: INCEPTION - Units Generation (Planning; Answers Awaiting)
+- **Current Stage**: INCEPTION - Units Generation (Planning; Q2 Clarification Required)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -31,7 +31,7 @@
 - [x] User Stories (Approved)
 - [x] Workflow Planning (Approved after S3 JSON persistence clarification)
 - [x] Application Design (Approved)
-- [ ] Units Generation (Planning; awaiting answers and plan approval)
+- [ ] Units Generation (Plan approved; Q2 answer clarification pending)
 
 ### CONSTRUCTION PHASE
 - [ ] Functional Design (To be assessed)
@@ -47,4 +47,4 @@
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
 - **Current Stage**: Units Generation Planning
-- **Next Action**: User answers the relevant questions in `aidlc-docs/inception/plans/unit-of-work-plan.md`; resolve ambiguities and obtain explicit plan approval before generating unit artifacts.
+- **Next Action**: User answers Question 6 in `aidlc-docs/inception/plans/unit-of-work-plan.md` to clarify the invalid `S` response to Question 2 before unit artifacts are generated.

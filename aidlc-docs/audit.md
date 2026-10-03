@@ -148,6 +148,12 @@
 **Timestamp**: 2026-10-03T16:33:26+09:00
 **Context**: Modular monolith and single release are approved. The unit plan will ask whether to keep one development unit or split work units while retaining the single-app deployment, and will address shared S3 JSON dependencies and team/code boundaries.
 
+## Units Generation - Planning Answers
+**Timestamp**: 2026-10-03T16:36:22+09:00
+**User Input**: `入力完了`; plan answers Q1-A, Q2-S, Q3-A, Q4-A, Q5-B; plan review `[Answer]: A`.
+**Analysis**: Q1/Q3/Q4 agree on a single work unit, one primary contributor, and one application/release. Q5-B selects layer-based code organization. Q2-S is not a valid listed option and is potentially N/A under a single unit.
+**Status**: Plan approval recorded, but generation is blocked pending clarification in Question 6 of `unit-of-work-plan.md`.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.
