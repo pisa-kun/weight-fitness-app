@@ -131,6 +131,14 @@
 **Timestamp**: 2026-10-03T16:22:23+09:00
 **Artifacts**: `application-design-plan.md` and `application-design-plan-review.md` created. Awaiting plan approval and answers to five design questions.
 
+## Application Design - Answers and Completion
+**Timestamp**: 2026-10-03T16:30:37+09:00
+**User Input**: `回答` with `[Answer]: A` for Question 6.
+**Resolved Boundary**: Keep UI, services, and S3 access modules within one application/release unit and prioritize low operating cost. Q2-B monthly JSON, Q3-A all transfers through backend, Q4-A feature-specific services, and Q5-A typed results/errors are recorded in the plan.
+**Artifacts**: `components.md`, `component-methods.md`, `services.md`, `component-dependency.md`, `application-design.md`, and `application-design-review.md` created. Design artifacts passed editor validation.
+**Completion Prompt**: "`aidlc-docs/inception/application-design/` の設計成果物を確認し、A) 承認してUnits Generationへ進む、B) 修正を依頼する、X) その他から選択してください。"
+**Status**: Awaiting explicit approval in `aidlc-docs/inception/application-design/application-design-review.md`.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.

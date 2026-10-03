@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: INCEPTION - Application Design (Component Boundary Clarification)
+- **Current Stage**: INCEPTION - Application Design (Generated; Awaiting Review)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -30,7 +30,7 @@
 - [x] Requirements Analysis (Approved)
 - [x] User Stories (Approved)
 - [x] Workflow Planning (Approved after S3 JSON persistence clarification)
-- [ ] Application Design (Plan approved; component boundary clarification pending)
+- [ ] Application Design (Artifacts complete; awaiting explicit approval)
 - [ ] Units Generation (To be assessed)
 
 ### CONSTRUCTION PHASE
@@ -46,5 +46,5 @@
 
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
-- **Current Stage**: Application Design Planning
-- **Next Action**: User answers Question 6 in `aidlc-docs/inception/plans/application-design-plan.md` to clarify the cost-prioritized component boundary.
+- **Current Stage**: Application Design Review
+- **Next Action**: User reviews `aidlc-docs/inception/application-design/` and records approval in `aidlc-docs/inception/application-design/application-design-review.md` before Units Generation.
