@@ -154,6 +154,14 @@
 **Analysis**: Q1/Q3/Q4 agree on a single work unit, one primary contributor, and one application/release. Q5-B selects layer-based code organization. Q2-S is not a valid listed option and is potentially N/A under a single unit.
 **Status**: Plan approval recorded, but generation is blocked pending clarification in Question 6 of `unit-of-work-plan.md`.
 
+## Units Generation - Clarification and Artifacts
+**Timestamp**: 2026-10-03T16:38:54+09:00
+**User Input**: `Cで再入力`.
+**Resolution**: Q6-C makes Q2-S N/A for a single Unit; follow the approved Application Design dependency order (UI → API → services → stores → S3).
+**Artifacts**: Generated `unit-of-work.md`, `unit-of-work-dependency.md`, `unit-of-work-story-map.md`, and `unit-of-work-review.md`. One Unit owns all 11 stories; generated artifacts passed editor validation.
+**Completion Prompt**: "`aidlc-docs/inception/application-design/unit-of-work.md`、`unit-of-work-dependency.md`、`unit-of-work-story-map.md`を確認し、A) 承認してFunctional Designへ進む、B) 修正を依頼する、X) その他から選択してください。"
+**Status**: Awaiting explicit approval in `aidlc-docs/inception/application-design/unit-of-work-review.md`.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.

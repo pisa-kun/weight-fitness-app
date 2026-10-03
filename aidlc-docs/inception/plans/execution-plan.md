@@ -93,7 +93,7 @@ Reverse EngineeringはGreenfieldのためスキップ。OperationsはAI-DLC v1�
 - [x] User Stories（承認済み）
 - [x] Workflow Planning（FR-08の認識確認後に承認）
 - [x] Application Design（承認済み）: UI、データ処理、ストレージ、同期境界が必要な新規アプリ。
-- [ ] Units Generation（計画中）: 日付記録・ミッション・画像のデータモデルと実装単位を定義する。
+- [x] Units Generation（成果物生成済み、レビュー待ち）: 単一Unitとレイヤー依存、全ストーリー割当を定義する。
 
 ### CONSTRUCTION PHASE
 

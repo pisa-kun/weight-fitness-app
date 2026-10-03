@@ -1,6 +1,6 @@
 # Unit of Work 分割計画
 
-**状態**: 計画承認済み、Q2の意図確認待ち  
+**状態**: Unit成果物完成、ユーザーレビュー待ち  
 **参照**: `aidlc-docs/inception/requirements/requirements.md`、`aidlc-docs/inception/user-stories/stories.md`、`aidlc-docs/inception/application-design/`
 
 ## 前提
@@ -12,14 +12,14 @@
 
 ## 計画手順
 
-- [ ] 全ストーリーと設計コンポーネントを対応付ける
-- [ ] 回答に基づきUnit数と各Unitの責務を決める
-- [ ] 共通データ契約、月次JSON、画像保管などの依存順を明確にする
-- [ ] チーム境界と同一リリース内での統合方法を整理する
-- [ ] Greenfieldのコード配置方針を選択したUnit数に合わせて記録する
-- [ ] `unit-of-work.md`、`unit-of-work-dependency.md`、`unit-of-work-story-map.md`を作成する
-- [ ] 全ストーリーの割当、責務重複、循環依存を検証する
-- [ ] 分割計画の明示承認を得てからUnit成果物を生成する
+- [x] 全ストーリーと設計コンポーネントを対応付ける
+- [x] 回答に基づきUnit数と各Unitの責務を決める
+- [x] 共通データ契約、月次JSON、画像保管などの依存順を明確にする
+- [x] チーム境界と同一リリース内での統合方法を整理する
+- [x] Greenfieldのコード配置方針を選択したUnit数に合わせて記録する
+- [x] `unit-of-work.md`、`unit-of-work-dependency.md`、`unit-of-work-story-map.md`を作成する
+- [x] 全ストーリーの割当、責務重複、循環依存を検証する
+- [x] 分割計画の明示承認を得てからUnit成果物を生成する
 
 ## 分割方法の選択肢
 
@@ -110,7 +110,17 @@ C) Unit間依存の質問は単一UnitのためN/Aとし、Application Designで
 
 X) その他（`S`で意図した内容を説明してください）
 
-[Answer]:
+[Answer]: C
+
+## 回答結果
+
+- Q1-A: 全機能を1つの開発Unitに含める。
+- Q2-Sは選択肢にないため、Q6-Cにより単一UnitではUnit間依存なしとし、Application Designのレイヤー依存順に従う。
+- Q3-A: 主に一人で順番に開発し、担当者別境界は設けない。
+- Q4-A: 同一アプリ、同一リリース、同一スケール単位とする。
+- Q5-B: コードはPresentation、API、Application、Domain、Infrastructureのレイヤーで整理する。
+- Q6-C: Unit間依存はN/A。UI→API→サービス→ストア→S3の順に実装する。
+- 計画レビューはAで承認済み。Unit成果物は生成済みで、成果物レビュー待ち。
 
 ### Greenfield複数Unitを選択した場合のコード配置
 
