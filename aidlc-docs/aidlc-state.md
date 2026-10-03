@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: INCEPTION - User Stories (Planning; Answers Awaiting)
+- **Current Stage**: INCEPTION - User Stories (Generated; Awaiting Review)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -28,7 +28,7 @@
 - [x] Workspace Detection (Greenfield)
 - [x] Reverse Engineering (Skipped: no existing application code)
 - [x] Requirements Analysis (Approved)
-- [ ] User Stories (Planning; awaiting explicit plan approval)
+- [ ] User Stories (Generated; awaiting explicit approval)
 - [ ] Workflow Planning
 - [ ] Application Design (To be assessed)
 - [ ] Units Generation (To be assessed)
@@ -46,5 +46,5 @@
 
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
-- **Current Stage**: User Stories Planning
-- **Next Action**: User records explicit approval in `aidlc-docs/inception/plans/story-generation-plan-review.md` before stories and personas are generated.
+- **Current Stage**: User Stories Review
+- **Next Action**: User reviews `aidlc-docs/inception/user-stories/stories.md` and `personas.md`, then records explicit approval in `aidlc-docs/inception/user-stories/stories-review.md`.
