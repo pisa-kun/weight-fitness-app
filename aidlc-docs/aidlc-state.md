@@ -28,7 +28,7 @@
 - [x] Workspace Detection (Greenfield)
 - [x] Reverse Engineering (Skipped: no existing application code)
 - [x] Requirements Analysis (Approved)
-- [ ] User Stories (Planning; awaiting answers and plan approval)
+- [ ] User Stories (Planning; awaiting explicit plan approval)
 - [ ] Workflow Planning
 - [ ] Application Design (To be assessed)
 - [ ] Units Generation (To be assessed)
@@ -47,4 +47,4 @@
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
 - **Current Stage**: User Stories Planning
-- **Next Action**: User fills all `[Answer]:` fields in `aidlc-docs/inception/plans/story-generation-plan.md`; analyze answers and obtain explicit plan approval before generating stories.
+- **Next Action**: User records explicit approval in `aidlc-docs/inception/plans/story-generation-plan-review.md` before stories and personas are generated.

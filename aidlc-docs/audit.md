@@ -96,3 +96,9 @@
 **Timestamp**: 2026-10-03T16:00:30+09:00
 **Assessment**: Execute. This is a new user-facing app with multiple user workflows and health-data/privacy decisions that benefit from testable stories.
 **Artifacts**: `aidlc-docs/inception/plans/user-stories-assessment.md` and `aidlc-docs/inception/plans/story-generation-plan.md` created. Story-plan answers and explicit plan approval are pending.
+
+## User Stories - Plan Approval
+**Timestamp**: 2026-10-03T16:03:34+09:00
+**Plan Answers**: Q1 B (Feature-Based); Q2 A (small independent value); Q3 B (title and short description); Q4 B (checklist acceptance criteria); Q5 B (one persona); Q6 A (include edge and error cases); Q7 A (user-visible NFR behavior in acceptance criteria, technical constraints referenced by requirement ID).
+**AI Prompt**: "本計画を確認し、A) 承認してストーリー・ペルソナ生成に進む、B) 修正を依頼する、X) その他から選択してください。"
+**Status**: Awaiting explicit approval in `aidlc-docs/inception/plans/story-generation-plan-review.md`.
