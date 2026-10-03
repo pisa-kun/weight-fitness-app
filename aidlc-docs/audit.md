@@ -109,3 +109,14 @@
 **Status**: Plan approved; generated 12 Feature-Based stories and one persona. Stories cover functional requirements FR-01 through FR-10 and trace cross-cutting NFRs.
 **Completion Prompt**: "`aidlc-docs/inception/user-stories/stories.md` と `aidlc-docs/inception/user-stories/personas.md` をレビューし、A) Workflow Planningへ進む、B) 修正を依頼する、X) その他から選択してください。"
 **Status**: Awaiting explicit approval in `aidlc-docs/inception/user-stories/stories-review.md`.
+
+## User Stories - Approval
+**Timestamp**: 2026-10-03T16:14:53+09:00
+**User Response**: `[Answer]: A` in `aidlc-docs/inception/user-stories/stories-review.md`
+**Status**: Approved. Stories and persona marked approved; proceeding to Workflow Planning.
+
+## Workflow Planning - Approval
+**Timestamp**: 2026-10-03T16:14:53+09:00
+**AI Prompt**: "実施フェーズ、スキップ判断、承認ゲートを確認し、A) 計画を承認してApplication Designへ進む、B) 修正を依頼する、X) その他から選択してください。"
+**Plan Summary**: Execute Application Design, Units Generation, Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, and Build and Test. Skip Reverse Engineering for Greenfield; Operations remains a v1 placeholder. AWS resource creation/deployment is gated on separate approval of account, region, access model, and cost.
+**Status**: Awaiting explicit approval in `aidlc-docs/inception/plans/execution-plan-review.md`.

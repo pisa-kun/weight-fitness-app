@@ -1,6 +1,6 @@
 # User Personas
 
-**状態**: ユーザーレビュー待ち  
+**状態**: 承認済み  
 **元資料**: `aidlc-docs/inception/requirements/requirements.md`、`aidlc-docs/inception/plans/story-generation-plan.md`
 
 ## P-01 日々の記録利用者
