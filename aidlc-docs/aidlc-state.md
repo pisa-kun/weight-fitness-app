@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: INCEPTION - Application Design (Generated; Awaiting Review)
+- **Current Stage**: INCEPTION - Units Generation (Planning; Answers Awaiting)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -30,8 +30,8 @@
 - [x] Requirements Analysis (Approved)
 - [x] User Stories (Approved)
 - [x] Workflow Planning (Approved after S3 JSON persistence clarification)
-- [ ] Application Design (Artifacts complete; awaiting explicit approval)
-- [ ] Units Generation (To be assessed)
+- [x] Application Design (Approved)
+- [ ] Units Generation (Planning; awaiting answers and plan approval)
 
 ### CONSTRUCTION PHASE
 - [ ] Functional Design (To be assessed)
@@ -46,5 +46,5 @@
 
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
-- **Current Stage**: Application Design Review
-- **Next Action**: User reviews `aidlc-docs/inception/application-design/` and records approval in `aidlc-docs/inception/application-design/application-design-review.md` before Units Generation.
+- **Current Stage**: Units Generation Planning
+- **Next Action**: User answers the relevant questions in `aidlc-docs/inception/plans/unit-of-work-plan.md`; resolve ambiguities and obtain explicit plan approval before generating unit artifacts.

@@ -139,6 +139,15 @@
 **Completion Prompt**: "`aidlc-docs/inception/application-design/` の設計成果物を確認し、A) 承認してUnits Generationへ進む、B) 修正を依頼する、X) その他から選択してください。"
 **Status**: Awaiting explicit approval in `aidlc-docs/inception/application-design/application-design-review.md`.
 
+## Application Design - Approval
+**Timestamp**: 2026-10-03T16:33:26+09:00
+**User Response**: `[Answer]: A` in `aidlc-docs/inception/application-design/application-design-review.md`.
+**Status**: Approved. Application Design artifacts marked approved; proceeding to Units Generation Planning.
+
+## Units Generation - Planning Started
+**Timestamp**: 2026-10-03T16:33:26+09:00
+**Context**: Modular monolith and single release are approved. The unit plan will ask whether to keep one development unit or split work units while retaining the single-app deployment, and will address shared S3 JSON dependencies and team/code boundaries.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.
