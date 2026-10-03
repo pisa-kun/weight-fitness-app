@@ -37,11 +37,11 @@
 
 ## FoodImageService
 
-**責務**: 画像入力を検証し、1日最大2枚のルールを適用して画像を保存する。画像参照は該当月のJSONに記録する。
+**責務**: 画像入力を検証し、形式・サイズ・1日最大2枚のルールを適用して画像を保存する。個別削除時は月JSON参照とS3オブジェクトを整合させる。
 
 **利用するコンポーネント**: MonthlyJsonRepository、ImageObjectStore、Result/Error Mapping。
 
-**代表操作**: `attachImage(date, image)`、`readImage(imageId)`。
+**代表操作**: `attachImage(date, image)`、`readImage(imageId)`、`removeImage(date, imageId, expectedVersion)`。
 
 ## MonthlyJsonRepository
 

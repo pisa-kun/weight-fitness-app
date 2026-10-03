@@ -178,6 +178,18 @@
 **Answers**: Q1-A (0.1 kg precision); Q2-X (empty initial mission list, user configures up to 15); Q3-A (template changes apply prospectively, history preserved); Q4-X (configure on first access, no day with zero missions); Q5-A (Asia/Tokyo); Q6-A (JPEG/PNG/WebP); Q7-B (10 MB); Q8-A (individual image delete with confirmation); Q9-B (last update wins); Q10-A (no app backup/restore); Q11-B (no full-data deletion).
 **Ambiguities**: Q4's "all dates" may conflict with Q3's preserved history; Q9-B conflicts with approved FR-08/US-08 data-loss prevention. Added Questions 12 and 13 to resolve these before functional artifacts are generated.
 
+## Functional Design - Clarifications Resolved
+**Timestamp**: 2026-10-03T16:55:17+09:00
+**User Input**: `記入した`.
+**Resolution**: Q12-A preserves historical mission snapshots and applies edits prospectively. Q13-A supersedes Q9-B: reject stale month writes, show latest data, and ask the user to reload/reapply. Q8-A adds individual image deletion; Q10-A/Q11-B mean no in-app backup/restore or full-data deletion.
+**Follow-up**: Added Q14 for historical dates before initial mission setup and Q15 for the separate daily exercise quota. Functional design generation remains paused until both are answered.
+
+## Functional Design - Confirmed Answers
+**Timestamp**: 2026-10-03T16:56:31+09:00
+**User Input**: Q12-A and Q13-A in `weight-fitness-app-functional-design-plan.md`.
+**Resolution**: Preserve past mission snapshots and apply edits prospectively. Q13-A supersedes Q9-B: reject stale writes and guide reload/reapply to preserve data. Updated FR-06/FR-10, US-07/US-08, and image APIs for individual deletion; app backup/restore and full-data deletion are not provided.
+**Follow-up**: Questions 14 and 15 remain open for pre-setup historical mission dates and the separate daily exercise quota.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.

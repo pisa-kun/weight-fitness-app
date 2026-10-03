@@ -26,6 +26,7 @@ type Result<T> = Success<T> | Failure<AppError>
 - `updateMonthlyGoal(yearMonth: YearMonth, goal: GoalUpdate): Result<GoalView>` — 月間目標の追加・編集を受け付ける。
 - `uploadFoodImage(date: LocalDate, image: ImageUpload): Result<ImageReference>` — 料理画像をバックエンド経由で保存する。
 - `getFoodImage(imageId: ImageId): Result<ImageContent>` — 画像をバックエンド経由で取得する。
+- `deleteFoodImage(date: LocalDate, imageId: ImageId): Result<void>` — 確認済みの画像個別削除を受け付ける。
 
 APIはログイン認証なしで動作する要件を持つ。全URL利用者は同じ共有データを読み書きする。具体的なHTTP動詞、パス、ペイロードサイズ制約はFunctional／NFR／Infrastructure設計で決める。
 
@@ -37,6 +38,7 @@ APIはログイン認証なしで動作する要件を持つ。全URL利用者�
 - `setMonthlyGoal(yearMonth: YearMonth, goal: GoalUpdate): Result<GoalView>` — 月間目標を保存する。
 - `attachFoodImage(date: LocalDate, image: ImageUpload): Result<ImageReference>` — 日あたり枚数を検証して画像を保管し、JSONに参照を記録する。
 - `readFoodImage(imageId: ImageId): Result<ImageContent>` — 画像参照を検証して画像データを取得する。
+- `removeFoodImage(date: LocalDate, imageId: ImageId, expectedVersion: Version?): Result<void>` — 月次JSON参照と画像オブジェクトを整合させて個別削除する。
 
 ## C-04 Monthly JSON Store
 
@@ -47,13 +49,15 @@ APIはログイン認証なしで動作する要件を持つ。全URL利用者�
 
 - `putImage(date: LocalDate, image: ImageUpload): Result<ImageReference>` — 画像オブジェクトを保存し参照を返す。
 - `readImage(imageId: ImageId): Result<ImageContent>` — 画像データを取得する。
+- `deleteImage(imageId: ImageId): Result<void>` — 非公開ストレージ上の個別画像を削除する。
 
-個別画像の削除・置換や全データ削除操作は要件が未確定のため、この高レベルAPIには含めない。
+全データ一括削除は要件にないため、この高レベルAPIには含めない。
 
 ## C-06 Private S3 Access
 
 - `getObject(key: ObjectKey): Result<ObjectContent>` — 非公開オブジェクトを取得する。
 - `putObject(key: ObjectKey, content: ObjectContent, contentType: MediaType): Result<ObjectVersion>` — オブジェクトを保存する。
+- `deleteObject(key: ObjectKey): Result<void>` — 対象オブジェクトを削除する。
 
 ## C-07 Result and Error Mapping
 
