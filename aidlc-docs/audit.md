@@ -162,6 +162,17 @@
 **Completion Prompt**: "`aidlc-docs/inception/application-design/unit-of-work.md`、`unit-of-work-dependency.md`、`unit-of-work-story-map.md`を確認し、A) 承認してFunctional Designへ進む、B) 修正を依頼する、X) その他から選択してください。"
 **Status**: Awaiting explicit approval in `aidlc-docs/inception/application-design/unit-of-work-review.md`.
 
+## Units Generation - Approval
+**Timestamp**: 2026-10-03T16:42:23+09:00
+**User Response**: `[Answer]: A` in `aidlc-docs/inception/application-design/unit-of-work-review.md`.
+**Status**: Approved. UOW-01 and all 11 story assignments are approved; proceeding to Construction Functional Design.
+
+## Functional Design - Planning Started
+**Timestamp**: 2026-10-03T16:42:23+09:00
+**Scope**: UOW-01 `weight-fitness-app`.
+**Known ambiguities**: Weight precision; initial mission set and historical template changes; completion behavior with no missions; timezone; image formats, size and per-image removal; stale monthly JSON conflict behavior; backup/restore and all-data deletion.
+**Artifacts**: Functional design planning file is being prepared. PBT partial enforcement will cover pure-function invariants and JSON serialization round-trips.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.

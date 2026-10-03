@@ -1,6 +1,6 @@
 # Unit of Work
 
-**状態**: ユーザーレビュー待ち  
+**状態**: 承認済み  
 **Unit ID**: UOW-01  
 **Unit名**: `weight-fitness-app`  
 **Unit数**: 1  

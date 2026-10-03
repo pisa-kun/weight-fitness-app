@@ -1,6 +1,6 @@
 # Unit of Work 依存関係
 
-**状態**: ユーザーレビュー待ち  
+**状態**: 承認済み  
 **分割**: 単一Unit `UOW-01 weight-fitness-app`。Unit間依存なし。
 
 ## レイヤー依存マトリクス

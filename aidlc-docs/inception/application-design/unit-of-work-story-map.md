@@ -1,6 +1,6 @@
 # Unit of Work Story Map
 
-**状態**: ユーザーレビュー待ち  
+**状態**: 承認済み  
 **ストーリー出典**: `aidlc-docs/inception/user-stories/stories.md`
 
 | Story | 概要 | Unit | 主なレイヤー |

@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: INCEPTION - Units Generation (Generated; Awaiting Review)
+- **Current Stage**: CONSTRUCTION - Functional Design (Planning; Answers Awaiting)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -31,10 +31,10 @@
 - [x] User Stories (Approved)
 - [x] Workflow Planning (Approved after S3 JSON persistence clarification)
 - [x] Application Design (Approved)
-- [ ] Units Generation (Artifacts complete; awaiting explicit approval)
+- [x] Units Generation (Approved)
 
 ### CONSTRUCTION PHASE
-- [ ] Functional Design (To be assessed)
+- [ ] Functional Design (Planning; awaiting answers to clarify business rules)
 - [ ] NFR Requirements (To be assessed)
 - [ ] NFR Design (To be assessed)
 - [ ] Infrastructure Design (To be assessed)
@@ -46,5 +46,5 @@
 
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
-- **Current Stage**: Units Generation Review
-- **Next Action**: User reviews `aidlc-docs/inception/application-design/unit-of-work.md`, `unit-of-work-dependency.md`, and `unit-of-work-story-map.md`, then records approval in `unit-of-work-review.md` before Functional Design.
+- **Current Stage**: Functional Design Planning
+- **Next Action**: User answers all questions in `aidlc-docs/construction/plans/weight-fitness-app-functional-design-plan.md`; resolve ambiguities before generating functional design artifacts.

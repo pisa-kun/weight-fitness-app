@@ -93,11 +93,11 @@ Reverse EngineeringはGreenfieldのためスキップ。OperationsはAI-DLC v1�
 - [x] User Stories（承認済み）
 - [x] Workflow Planning（FR-08の認識確認後に承認）
 - [x] Application Design（承認済み）: UI、データ処理、ストレージ、同期境界が必要な新規アプリ。
-- [x] Units Generation（成果物生成済み、レビュー待ち）: 単一Unitとレイヤー依存、全ストーリー割当を定義する。
+- [x] Units Generation（承認済み）: 単一Unitとレイヤー依存、全ストーリー割当を定義する。
 
 ### CONSTRUCTION PHASE
 
-- [ ] Functional Design（実施）: 日次完了、ミッション、画像上限、S3 JSON保存などの業務ルールを詳細化する。
+- [ ] Functional Design（計画中）: 日次完了、ミッション、画像上限、S3 JSON保存などの業務ルールを詳細化する。
 - [ ] NFR Requirements（実施）: 性能・プライバシー・同期整合性・テスト技術を具体化する。PBT-09に従い言語とPBTフレームワークも選定する。
 - [ ] NFR Design（実施）: データ保護、同期競合、エラー処理、未確定のバックアップ・復旧・削除方針などを設計する。Security BaselineとResiliency Baselineは無効だが、承認済み要件の制約は適用する。
 - [ ] Infrastructure Design（実施）: AWS構成、S3アクセス制御、費用見積もり、デプロイ前承認条件を具体化する。
