@@ -47,4 +47,4 @@
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
 - **Current Stage**: Functional Design Planning
-- **Next Action**: User answers all questions in `aidlc-docs/construction/plans/weight-fitness-app-functional-design-plan.md`; resolve ambiguities before generating functional design artifacts.
+- **Next Action**: User answers Questions 12 and 13 in `aidlc-docs/construction/plans/weight-fitness-app-functional-design-plan.md`; resolve mission-history and concurrent-update conflicts before generating functional design artifacts.

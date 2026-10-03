@@ -1,4 +1,4 @@
-# Unit of Work レビュー・承認
+# Unit oF Work レビュー・承認
 
 **レビュー対象**:
 - `aidlc-docs/inception/application-design/unit-of-work.md`

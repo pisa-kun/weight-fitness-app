@@ -173,6 +173,11 @@
 **Known ambiguities**: Weight precision; initial mission set and historical template changes; completion behavior with no missions; timezone; image formats, size and per-image removal; stale monthly JSON conflict behavior; backup/restore and all-data deletion.
 **Artifacts**: Functional design planning file is being prepared. PBT partial enforcement will cover pure-function invariants and JSON serialization round-trips.
 
+## Functional Design - Planning Answers
+**Timestamp**: 2026-10-03T16:52:09+09:00
+**Answers**: Q1-A (0.1 kg precision); Q2-X (empty initial mission list, user configures up to 15); Q3-A (template changes apply prospectively, history preserved); Q4-X (configure on first access, no day with zero missions); Q5-A (Asia/Tokyo); Q6-A (JPEG/PNG/WebP); Q7-B (10 MB); Q8-A (individual image delete with confirmation); Q9-B (last update wins); Q10-A (no app backup/restore); Q11-B (no full-data deletion).
+**Ambiguities**: Q4's "all dates" may conflict with Q3's preserved history; Q9-B conflicts with approved FR-08/US-08 data-loss prevention. Added Questions 12 and 13 to resolve these before functional artifacts are generated.
+
 ## Application Design - Plan Approval and Answers
 **Timestamp**: 2026-10-03T16:27:22+09:00
 **User Response**: `[Answer]: A` in `aidlc-docs/inception/plans/application-design-plan-review.md`.
