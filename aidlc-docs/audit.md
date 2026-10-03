@@ -120,3 +120,13 @@
 **AI Prompt**: "実施フェーズ、スキップ判断、承認ゲートを確認し、A) 計画を承認してApplication Designへ進む、B) 修正を依頼する、X) その他から選択してください。"
 **Plan Summary**: Execute Application Design, Units Generation, Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, and Build and Test. Skip Reverse Engineering for Greenfield; Operations remains a v1 placeholder. AWS resource creation/deployment is gated on separate approval of account, region, access model, and cost.
 **Status**: Awaiting explicit approval in `aidlc-docs/inception/plans/execution-plan-review.md`.
+
+## Workflow Planning - Storage Clarification
+**Timestamp**: 2026-10-03T16:22:23+09:00
+**User Input**: `[Answer]: X(Jsonのインポート/エクスポートではなく、画面上に表示するデータをデータベースではなくS3配置のjsonにしてほしいの意味。これですでに認識済みなら次に進んでほしい。)`
+**Resolution**: FR-08 already specified S3 JSON as the normal persistence source for displayed application data. Updated FR-10 and US-10 to remove manual JSON/image import-export and unconfirmed all-data deletion from committed scope; backup, restore, and deletion policy remain open for later design. This does not change the S3 JSON runtime-storage requirement.
+**Approval**: The conditional instruction to proceed was satisfied by the existing FR-08; Workflow Planning is approved and Application Design Planning begins.
+
+## Application Design - Planning Started
+**Timestamp**: 2026-10-03T16:22:23+09:00
+**Artifacts**: `application-design-plan.md` and `application-design-plan-review.md` created. Awaiting plan approval and answers to five design questions.

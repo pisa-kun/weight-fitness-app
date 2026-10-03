@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: INCEPTION - Workflow Planning (Plan Awaiting Review)
+- **Current Stage**: INCEPTION - Application Design (Plan Awaiting Review)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -29,8 +29,8 @@
 - [x] Reverse Engineering (Skipped: no existing application code)
 - [x] Requirements Analysis (Approved)
 - [x] User Stories (Approved)
-- [ ] Workflow Planning (Plan prepared; awaiting explicit approval)
-- [ ] Application Design (To be assessed)
+- [x] Workflow Planning (Approved after S3 JSON persistence clarification)
+- [ ] Application Design (Plan review pending; design questions follow approval)
 - [ ] Units Generation (To be assessed)
 
 ### CONSTRUCTION PHASE
@@ -46,5 +46,5 @@
 
 ## Current Status
 - **Lifecycle Phase**: INCEPTION
-- **Current Stage**: Workflow Planning Review
-- **Next Action**: User reviews `aidlc-docs/inception/plans/execution-plan.md` and records explicit approval in `aidlc-docs/inception/plans/execution-plan-review.md` before Application Design begins.
+- **Current Stage**: Application Design Plan Review
+- **Next Action**: User reviews `aidlc-docs/inception/plans/application-design-plan.md` and records approval in `aidlc-docs/inception/plans/application-design-plan-review.md`. After approval, answer the plan's five design questions.
