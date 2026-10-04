@@ -208,3 +208,14 @@
 **Confirmed State**: Q1-Q16 answered. Four Functional Design draft files exist under `aidlc-docs/construction/weight-fitness-app/functional-design/`; Q16-B permits completed color before mission setup when weight is recorded.
 **Remaining Work**: Synchronize MissionConfigurationRepository across `component-dependency.md`, `application-design.md`, and UOW artifacts; verify FR/US/story-map traceability; validate all four design drafts; then request review through `functional-design-review.md`.
 **Next Stage**: After Functional Design approval, proceed to NFR Requirements, where language and framework selection belong. No application code or AWS resources have been created.
+
+## Session Continuity - Functional Design Resumed
+**Timestamp**: 2026-10-04T06:02:34Z
+**User Input**:
+> Ai-DLCの作業を再開してください。commit & pushはせずに進めてね。
+
+**Context Loaded**: Read AI-DLC v1.0.0 core workflow, common rules, the in-progress Functional Design rules, enabled Property-Based Testing rules, prior requirements/stories/application design/UOW artifacts, and all four Functional Design drafts.
+**Extension Compliance**: Security Baseline and Resiliency Baseline remain disabled and were skipped. Property-Based Testing remains partial (PBT-02, PBT-03, PBT-07, PBT-08, PBT-09); its applicable design properties are recorded in the functional artifacts.
+**Actions**: Aligned MissionConfigurationRepository/C-08 across Application Design and UOW artifacts; removed duplicate method entries; completed the already-resolved Q14/Q15 answer fields; aligned the mission setup API reference; changed the Functional Design review file to the required two-option approval gate; updated plan and state to indicate review pending.
+**Git**: No commit or push performed.
+**Status**: Functional Design artifacts are ready for user review. Await explicit approval in `aidlc-docs/construction/weight-fitness-app/functional-design/functional-design-review.md` before proceeding to NFR Requirements.

@@ -16,6 +16,7 @@
 - HTTP Application API
 - 日次記録、ミッション、月間目標、カレンダー、料理画像の機能サービス
 - 月単位JSONを用いたアプリデータの通常永続化
+- 全月共有Mission Configuration JSONの通常永続化とversion競合制御
 - 非公開S3上のJSON・画像へのバックエンド経由アクセス
 - 日付単位の料理画像個別削除と月JSON参照の整合
 - 型付きエラーの伝達と利用者向けエラー変換
@@ -30,6 +31,7 @@ US-01〜US-11の全ストーリーを本Unitが実装する。対応表は`unit-
 - Unit間の依存はない。Q2のUnit間依存は、Q6-Cにより単一UnitのためN/Aとする。
 - 内部の実装依存はPresentation → API → Application → Domain/Repository Interface → S3 Adapterの一方向とする。
 - JSONと画像はブラウザーから直接S3へ送受信せず、バックエンドを経由する。
+- MissionServiceはMissionConfigurationRepositoryとMonthlyJsonRepositoryを使い分け、共有定義と日別スナップショットを別JSONとして扱う。
 - S3バケットは非公開。認証なしのアプリURLアクセスは全利用者が同じデータ領域を共有する。
 - AWSサービス、フレームワーク、同期の条件付き書込方式は後続NFR／Infrastructure設計で決める。
 
@@ -52,7 +54,7 @@ config/
 - `src/api/`: HTTP API境界
 - `src/application/`: 機能別ユースケースサービス
 - `src/domain/`: 日付記録、ミッション、画像参照、Result/Errorなどの共有モデル
-- `src/infrastructure/`: 月次JSONリポジトリ、画像オブジェクトストア、非公開S3アダプター
+- `src/infrastructure/`: 月次JSONリポジトリ、MissionConfigurationRepository、画像オブジェクトストア、非公開S3アダプター
 - `tests/`: レイヤー内の例ベーステストと、選択済み範囲のプロパティベーステスト
 - `config/`: 環境別設定テンプレート。秘密値は含めず、環境変数等で注入する。
 

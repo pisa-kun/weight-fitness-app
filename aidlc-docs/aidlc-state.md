@@ -3,7 +3,7 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: CONSTRUCTION - Functional Design (Drafts Created; Cross-Document Alignment Pending)
+- **Current Stage**: CONSTRUCTION - Functional Design (Aligned; Awaiting User Review/Approval)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
@@ -34,7 +34,7 @@
 - [x] Units Generation (Approved)
 
 ### CONSTRUCTION PHASE
-- [ ] Functional Design (Drafts created; align Mission Configuration storage across approved design artifacts, then review)
+- [ ] Functional Design (Drafts aligned across Application Design/UOW; awaiting user review and approval)
 - [ ] NFR Requirements (To be assessed)
 - [ ] NFR Design (To be assessed)
 - [ ] Infrastructure Design (To be assessed)
@@ -46,5 +46,5 @@
 
 ## Current Status
 - **Lifecycle Phase**: CONSTRUCTION
-- **Current Stage**: Functional Design Handoff
-- **Next Action**: Align MissionConfigurationRepository across `components.md`, `component-dependency.md`, `application-design.md`, and UOW artifacts; validate all four functional-design documents and prepare their review. Language/framework selection follows in NFR Requirements.
+- **Current Stage**: Functional Design Review
+- **Next Action**: Review the four functional-design documents and record the explicit decision in `functional-design-review.md`. After approval, proceed to NFR Requirements, where language/framework selection belongs.

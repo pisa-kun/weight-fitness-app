@@ -96,7 +96,7 @@
 - 古いversionからの更新を拒否しConflictを返す。
 - 月ごとの記録JSONとは別オブジェクトとして扱い、両方とも非公開S3へ保存する。
 
-**インターフェース**: C-03 Feature Servicesが利用し、C-06 Private S3 Accessを介して保存する。
+**インターフェース**: C-03 Feature Servicesが`MissionConfigurationRepository`として利用し、C-06 Private S3 Accessを介して保存する。
 
 ## 配置上の境界
 

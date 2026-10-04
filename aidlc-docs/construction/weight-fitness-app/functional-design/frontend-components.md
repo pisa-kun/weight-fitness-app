@@ -50,7 +50,7 @@
 
 - 月カレンダー／日付詳細: `getMonth(yearMonth)`
 - 体重・達成状態: `saveDay(date, update, expectedVersion)`
-- ミッション設定: `updateMission(command)`
+- ミッション設定: `configureMissions(definitions, expectedVersion)`。初回設定・定義変更は共有Mission Configurationへ保存し、日別達成状態は月JSONへ保存する。
 - 月間目標: `updateMonthlyGoal(yearMonth, goal)`
 - 画像の追加／表示／削除: `uploadFoodImage`、`getFoodImage`、`deleteFoodImage`
 - 全APIは認証なし。S3へ直接アクセスしない。

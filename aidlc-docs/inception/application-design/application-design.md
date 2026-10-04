@@ -21,14 +21,17 @@
 5. **Image Object Store**: 料理画像の保存・取得・個別削除を扱う。
 6. **Private S3 Access**: 非公開S3とのバックエンド内アクセスを提供する。
 7. **Result and Error Mapping**: 型付きエラーを一貫した画面応答へ変換する。
+8. **Mission Configuration Store**: 全月で共有するミッション設定JSONとversionを管理する。
 
 ## サービスと主要な依存
 
 - DailyRecordService、MissionService、MonthlyGoalService、CalendarQueryService、FoodImageServiceを機能別に分ける。
-- Feature ServicesはMonthlyJsonRepositoryまたはImageObjectStoreを介して永続化する。
+- MissionServiceは`MissionConfigurationRepository`を介して共有設定を扱い、日別スナップショットは`MonthlyJsonRepository`へ保存する。
+- Feature ServicesはMonthlyJsonRepository、MissionConfigurationRepositoryまたはImageObjectStoreを介して永続化する。
 - JSON・画像の両ストアはPrivateS3ObjectAdapterを共有し、S3 SDKやAWS詳細を機能サービスから隠す。
 - 同時更新は月JSONの期待バージョンを使う抽象契約で競合を通知する。具体的な競合解決と再試行は後続のFunctional/NFR設計で決める。
 - 古い月JSONバージョンからの更新は拒否し、最新値の再読込・再適用を利用者に求める。後着更新で自動上書きしない。
+- Mission Configurationは月JSONと独立した共有JSONであり、MissionConfigurationRepositoryからPrivate S3 Accessを介して読み書きする。
 
 ## 意図的に未決定の事項
 
