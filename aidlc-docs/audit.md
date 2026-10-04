@@ -303,3 +303,11 @@
 **Context**: Post Build and Test; deployment still pending on another PC.
 
 ---
+
+## Build and Test - Node.js Version Issue on Deployment PC
+**Timestamp**: 2026-10-04T13:40:00Z
+**User Input**: "別PCで npm run build 実施によって、 syntaxError the requested module node:util does not provide an export named styletext エラーになっている。"
+**AI Response**: Root cause: the deployment PC runs a Node.js version older than Vite 8 requires (`^20.19 || >=22.12`; `util.styleText` exists only from 20.12/21.7). Added `.nvmrc` (22), `scripts/check-node.mjs` run before typecheck/test, raised `engines` to `>=22.12.0` in both packages, and documented the fix. User must upgrade Node.js to 22 LTS and reinstall dependencies.
+**Context**: Build and Test follow-up; no application logic changed.
+
+---

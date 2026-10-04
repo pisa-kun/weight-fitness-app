@@ -20,7 +20,7 @@
 
 ## ローカル開発
 
-Node.js 22以上が必要です。
+Node.js 22.12以上（推奨: 22 LTS、`.nvmrc`参照）が必要です。古いNode.jsでは Vite 8 が `node:util does not provide an export named 'styleText'` で失敗するため、`npm run build` / `npm test` の前にバージョンを検査します。`node -v` で確認してください。
 
 ```powershell
 npm ci
