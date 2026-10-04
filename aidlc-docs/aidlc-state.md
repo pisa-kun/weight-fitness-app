@@ -3,13 +3,13 @@
 ## Project Information
 - **Project Type**: Greenfield
 - **Start Date**: 2026-10-03T00:00:00+09:00
-- **Current Stage**: CONSTRUCTION - Functional Design (Aligned; Awaiting User Review/Approval)
+- **Current Stage**: CONSTRUCTION - Build and Test (Complete; deployment pending on another PC)
 - **AI-DLC Version**: 1.0.0 (pinned)
 
 ## Workspace State
-- **Existing Code**: No
+- **Existing Code**: Yes (generated in Code Generation)
 - **Reverse Engineering Needed**: No
-- **Workspace Root**: C:\Develop\aws\weight-fitness-app
+- **Workspace Root**: c:\Users\4101480\develop\weight-fitness-app
 
 ## Code Location Rules
 - **Application Code**: Workspace root (NEVER in aidlc-docs/)
@@ -34,17 +34,17 @@
 - [x] Units Generation (Approved)
 
 ### CONSTRUCTION PHASE
-- [ ] Functional Design (Drafts aligned across Application Design/UOW; awaiting user review and approval)
-- [ ] NFR Requirements (To be assessed)
-- [ ] NFR Design (To be assessed)
-- [ ] Infrastructure Design (To be assessed)
-- [ ] Code Generation
-- [ ] Build and Test
+- [x] Functional Design (Approved - delegated, 2026-10-04)
+- [x] NFR Requirements (Approved - delegated)
+- [x] NFR Design (Approved - delegated)
+- [x] Infrastructure Design (Approved - delegated; IaC implemented, NOT deployed)
+- [x] Code Generation (14/14 steps; approved - delegated)
+- [x] Build and Test (Build success; 76 + 6 tests passed)
 
 ### OPERATIONS PHASE
-- [ ] Operations (AI-DLC v1 placeholder; deployment requirements will be planned explicitly)
+- [ ] Operations (AI-DLC v1 placeholder; deployment by the user from another PC)
 
 ## Current Status
-- **Lifecycle Phase**: CONSTRUCTION
-- **Current Stage**: Functional Design Review
-- **Next Action**: Review the four functional-design documents and record the explicit decision in `functional-design-review.md`. After approval, proceed to NFR Requirements, where language/framework selection belongs.
+- **Lifecycle Phase**: CONSTRUCTION complete
+- **Current Stage**: Awaiting user review of delegated decisions and deployment from another PC
+- **Next Action**: Review the delegated answers in `construction/plans/*-plan.md` (especially NFR Requirements Q7: in-browser image downscaling). Before deploying, complete the checklist in `construction/weight-fitness-app/infrastructure-design/deployment-architecture.md`, then run `cdk deploy` from the PC with AWS credentials.

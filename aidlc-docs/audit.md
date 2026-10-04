@@ -219,3 +219,79 @@
 **Actions**: Aligned MissionConfigurationRepository/C-08 across Application Design and UOW artifacts; removed duplicate method entries; completed the already-resolved Q14/Q15 answer fields; aligned the mission setup API reference; changed the Functional Design review file to the required two-option approval gate; updated plan and state to indicate review pending.
 **Git**: No commit or push performed.
 **Status**: Functional Design artifacts are ready for user review. Await explicit approval in `aidlc-docs/construction/weight-fitness-app/functional-design/functional-design-review.md` before proceeding to NFR Requirements.
+
+## Session Continuity - Construction Resumed with Delegated Approval
+**Timestamp**: 2026-10-04T12:16:10Z
+**User Input**:
+> AI-DLCの続きを進めてください。アプリケーションの実装が一度完了したらcommit & pushしてください。
+>
+> インフラの実装は進めてほしいですがデプロイは別PCのaws credentialsを使うのでインフラ実装までにとどめておいてほしいです。
+**Interpretation**: The user explicitly asks to continue the workflow through application implementation and commit/push. This is recorded as delegated approval for the pending Functional Design gate and for the subsequent NFR Requirements, NFR Design, Infrastructure Design, Code Generation, and Build and Test gates. Questions in each stage plan are still recorded with `[Answer]:` tags; answers are filled as "AI判断（ユーザー委任）" with rationale so that the user can revisit them.
+**Constraints**: Infrastructure as code is implemented but NOT deployed. No AWS credentials are used and no AWS resources are created from this PC. Deployment will be performed by the user from another PC.
+**Extension Compliance**: Security Baseline / Resiliency Baseline disabled (skipped). PBT partial (PBT-02, 03, 07, 08, 09) enforced.
+
+---
+
+## Functional Design - Approval (Delegated)
+**Timestamp**: 2026-10-04T12:16:10Z
+**User Response**: Delegated approval via the session instruction above. `[Answer]: B` recorded in `functional-design-review.md`.
+**Status**: Functional Design approved. Proceeding to NFR Requirements.
+
+---
+
+## NFR Requirements - Completed and Approved (Delegated)
+**Timestamp**: 2026-10-04T12:25:00Z
+**Artifacts**: `construction/plans/weight-fitness-app-nfr-requirements-plan.md`, `construction/weight-fitness-app/nfr-requirements/nfr-requirements.md`, `tech-stack-decisions.md`.
+**Decisions**: TypeScript / React + Vite / Lambda (Node.js 22) Function URL / CDK; Vitest + fast-check (PBT-09). Images: user may select up to 10 MB; browser downsizes and re-encodes to JPEG at or below 3.5 MB due to the Lambda 6 MB payload limit (no direct S3 upload).
+**PBT Compliance**: PBT-09 compliant. Other enforced rules N/A at this stage.
+**Approval**: Delegated by the session instruction.
+
+---
+
+## NFR Design - Completed and Approved (Delegated)
+**Timestamp**: 2026-10-04T12:30:00Z
+**Artifacts**: `construction/plans/weight-fitness-app-nfr-design-plan.md`, `nfr-design/nfr-design-patterns.md`, `nfr-design/logical-components.md`.
+**Decisions**: S3 ETag optimistic locking (If-Match / If-None-Match); lazy mission snapshot resolution by revision; two-step image add/delete with compensation and idempotent retry; no queue/cache/WAF.
+**Approval**: Delegated by the session instruction.
+
+---
+
+## Infrastructure Design - Completed and Approved (Delegated, Not Deployed)
+**Timestamp**: 2026-10-04T12:35:00Z
+**Artifacts**: `construction/plans/weight-fitness-app-infrastructure-design-plan.md`, `infrastructure-design/infrastructure-design.md`, `infrastructure-design/deployment-architecture.md`.
+**Decisions**: Single CDK stack in ap-northeast-1: CloudFront (OAC) + private S3 web bucket + Lambda Function URL (AWS_IAM via OAC) + private S3 data bucket (versioned, RETAIN). Estimated monthly cost is roughly tens of yen.
+**Deployment**: Not performed. The user will deploy from another PC after the pre-deployment checklist.
+**Approval**: Delegated by the session instruction.
+
+---
+
+## Code Generation - Plan Created (Delegated Approval)
+**Timestamp**: 2026-10-04T12:40:00Z
+**Artifact**: `construction/plans/weight-fitness-app-code-generation-plan.md` (14 steps, US-01 to US-11).
+**Approval**: Delegated by the session instruction; generation started.
+
+---
+
+## Code Generation - Completed (Delegated Approval)
+**Timestamp**: 2026-10-04T13:00:00Z
+**Result**: All 14 plan steps completed. Application code under `src/`, tests under `tests/`, IaC under `infra/`, CI in `.github/workflows/ci.yml`, summary in `construction/weight-fitness-app/code/code-summary.md`.
+**Deviation**: Repository classes consolidated into `src/infrastructure/repositories.ts`. Added `lambda:InvokeFunction` permission for CloudFront because CDK's FunctionUrlOrigin OAC helper grants only `lambda:InvokeFunctionUrl` (aws/aws-cdk#35872).
+**PBT Compliance**: PBT-02/03/07/08/09 compliant; no blocking findings.
+**Approval**: Delegated by the session instruction.
+
+---
+
+## Build and Test Stage
+**Timestamp**: 2026-10-04T13:05:00Z
+**Build Status**: Success (tsc, Vite, esbuild, cdk synth)
+**Test Status**: Pass (root 13 files / 76 tests; infra 1 file / 6 tests)
+**Files Generated**:
+- build-instructions.md
+- unit-test-instructions.md
+- integration-test-instructions.md
+- performance-test-instructions.md
+- build-and-test-summary.md
+**Deployment**: Not performed (user will deploy from another PC). No AWS credentials were used.
+**Git**: Committing and pushing per the user's instruction.
+
+---
